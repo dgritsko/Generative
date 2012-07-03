@@ -5,7 +5,7 @@
     <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
     <ProductVersion>8.0.30703</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
-    <ProjectGuid>b6431430-bfd3-461c-b0cb-fe7b8a686b51</ProjectGuid>
+    <ProjectGuid>{E57FBBDA-0053-40D6-97DB-61B3A0A40E7E}</ProjectGuid>
     <OutputType>Exe</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>Generative.Driver</RootNamespace>
