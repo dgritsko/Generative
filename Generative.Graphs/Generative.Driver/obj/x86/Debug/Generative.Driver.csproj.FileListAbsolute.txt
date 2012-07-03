@@ -1,0 +1,9 @@
+C:\Users\Cait\Documents\GitHub\Generative\Generative.Graphs\Generative.Driver\obj\x86\Debug\ResolveAssemblyReference.cache
+C:\Users\Cait\Documents\GitHub\Generative\Generative.Graphs\Generative.Driver\bin\Debug\Generative.Driver.exe
+C:\Users\Cait\Documents\GitHub\Generative\Generative.Graphs\Generative.Driver\bin\Debug\Generative.Driver.pdb
+C:\Users\Cait\Documents\GitHub\Generative\Generative.Graphs\Generative.Driver\bin\Debug\Generative.Generator.dll
+C:\Users\Cait\Documents\GitHub\Generative\Generative.Graphs\Generative.Driver\bin\Debug\Generative.Graphs.dll
+C:\Users\Cait\Documents\GitHub\Generative\Generative.Graphs\Generative.Driver\bin\Debug\Generative.Generator.pdb
+C:\Users\Cait\Documents\GitHub\Generative\Generative.Graphs\Generative.Driver\bin\Debug\Generative.Graphs.pdb
+C:\Users\Cait\Documents\GitHub\Generative\Generative.Graphs\Generative.Driver\obj\x86\Debug\Generative.Driver.exe
+C:\Users\Cait\Documents\GitHub\Generative\Generative.Graphs\Generative.Driver\obj\x86\Debug\Generative.Driver.pdb

@@ -31,17 +31,38 @@ namespace Generative.Generator
 
             var testDefinitions = new List<TestDefinition>();
 
-            foreach (var node in nodes)
+            foreach (var node in nodes.Where(n => n.IsStartingPoint))
             {
-                testDefinitions.AddRange(GetTestDefinitions(node, nodes.Except(new [] { node })));
+                testDefinitions.AddRange(GetTestDefinitions(node, nodes, new List<NodeBase>()));
             }
 
             return testDefinitions;
         }
 
-        private static IEnumerable<TestDefinition> GetTestDefinitions(NodeBase startingNodes, IEnumerable<NodeBase> otherNodes)
+        private static IEnumerable<TestDefinition> GetTestDefinitions(NodeBase initial, IEnumerable<NodeBase> allNodes, List<NodeBase> currentNodeList)
         {
-            throw new NotImplementedException();
+            var testDefinitions = new List<TestDefinition>();
+            
+            currentNodeList.Add(initial);
+            
+            if (initial.IsEndingPoint)
+                testDefinitions.Add(new TestDefinition(currentNodeList));
+
+            if (!initial.IsEndingPoint && initial.ExitEdges.Count == 0)
+                throw new Exception("Node is not an Ending point, but has no exit edges defined");
+
+
+            foreach (var nextNodeId in initial.ExitEdges)
+            {
+                var nextNode = allNodes.FirstOrDefault(n => n.Id == nextNodeId.Key && n.EntranceEdges.Any(ee => ee.Key == initial.Id));
+
+                if (nextNode == null)
+                    throw new Exception("Exit edge specified without matching entrance edge");
+
+                testDefinitions.AddRange(GetTestDefinitions(nextNode, allNodes, new List<NodeBase>(currentNodeList)));
+            }
+
+            return testDefinitions;
         }
     }
 }

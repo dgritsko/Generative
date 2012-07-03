@@ -46,6 +46,16 @@
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Generative.Generator\Generative.Generator.csproj">
+      <Project>{6C4C60CF-723F-4F77-B984-10B3AC4E534B}</Project>
+      <Name>Generative.Generator</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Generative.Graphs\Generative.Graphs.csproj">
+      <Project>{AFF7E4E9-887A-4767-8DF1-D008184747DB}</Project>
+      <Name>Generative.Graphs</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

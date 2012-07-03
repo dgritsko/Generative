@@ -7,8 +7,12 @@ namespace Generative.Graphs
     {
         public abstract int Id { get; }
 
-        public abstract Dictionary<int, Action> EntranceEdges;
+        public abstract Dictionary<int, Action> EntranceEdges { get; }
 
-        public abstract Dictionary<int, Action> ExitEdges;
+        public abstract Dictionary<int, Action> ExitEdges { get; }
+
+        public virtual bool IsStartingPoint { get { return false; } }
+
+        public virtual bool IsEndingPoint { get { return true; } }
     }
 }
